@@ -5,7 +5,11 @@
 @use "@infragistics/igniteui-angular/theming" as *;
 
 @include core();
-@include typography($font-family: "Lato", $type-scale: $fluent-type-scale);
+@include typography($type-scale: $material-type-scale);
+
+.makeItFluent {
+  @include typography($font-family: "Lato", $type-scale: $fluent-type-scale);
+}
 
 $custom-palette: palette(
   $primary: #1B5F9E,
