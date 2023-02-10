@@ -1,0 +1,80 @@
+<div class="row-layout group">
+  <div [igxToggleAction]="navDrawer" class="row-layout group_1">
+    <igx-icon class="icon">
+      menu
+    </igx-icon>
+  </div>
+  <igx-navbar class="navbar">
+    <igx-navbar-title>
+      <img src="/assets/CRM Logo.svg" class="image" />
+    </igx-navbar-title>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        search
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        settings
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        notifications_none
+      </igx-icon>
+    </button>
+  </igx-navbar>
+</div>
+<div class="row-layout group_2">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="900" width="200px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <igx-list class="list">
+        <igx-list-item [isHeader]="false" routerLink="/home">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Home-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Home</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/accounts">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Accounts-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Accounts</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/contacts">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Contacts-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Contacts</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/contracts">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Contracts-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Contracts</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/reports">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Reports-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Reports</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/calendar">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Calendar-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Calendar</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/tasks">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Tasks-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Tasks</span>
+        </igx-list-item>
+      </igx-list>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,288 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  background-color: hsla(var(--ig-gray-100));
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+  position: relative;
+  padding: 12px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group_1 {
+  background-color: hsla(var(--ig-surface-500));
+  border-color: hsla(var(--ig-gray-300));
+  border-width: 1px;
+  border-style: solid;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  padding: 16px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 50px;
+}
+.page-title {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 12px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_3 {
+  background-color: #DAE5D4;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+}
+.buttons {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 50px;
+}
+.filters-and-sorting {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 50px;
+  flex-shrink: 0;
+}
+.group_4 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+}
+.group_5 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_6 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  padding: 16px 0 0;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_7 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 40px;
+  overflow: auto;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  max-height: 600px;
+  flex-shrink: 0;
+}
+.group_8 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_9 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_10 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 280px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_11 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  margin: 0 0 5px;
+  min-width: 50px;
+}
+.group_12 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_13 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.image {
+  object-fit: cover;
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  flex-shrink: 0;
+}
+.h6 {
+  height: max-content;
+  min-width: min-content;
+}
+.icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.h6_1 {
+  color: hsla(var(--ig-gray-900));
+  height: max-content;
+}
+.text {
+  margin: 0 0 24px;
+  height: max-content;
+}
+.text_1 {
+  color: hsla(var(--ig-gray-500));
+  height: max-content;
+  min-width: min-content;
+}
+.text_2 {
+  color: hsla(var(--ig-gray-700));
+  height: max-content;
+  min-width: min-content;
+}
+.text_3 {
+  margin: 0 0 8px;
+  height: max-content;
+}
+.textarea {
+  height: max-content;
+}
+.button {
+  color: hsla(var(--ig-primary-500));
+  background-color: hsla(var(--ig-secondary-100));
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.select {
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.input {
+  height: max-content;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+.button_1 {
+  color: hsla(var(--ig-primary-500));
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.dropdown {
+  height: max-content;
+  min-width: min-content;
+}
+.user-input {
+  height: max-content;
+}
+.user-input_1 {
+  height: max-content;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.button_2 {
+  margin: 8px 16px 16px 0;
+  height: max-content;
+  min-width: min-content;
+}
+.button_3 {
+  color: hsla(var(--ig-surface-500));
+  margin: 8px 16px 16px 0;
+  height: max-content;
+  min-width: min-content;
+}
+.grid {
+  flex-grow: 1;
+  flex-basis: 0;
+}

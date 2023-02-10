@@ -1,0 +1,339 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <div class="column-layout group_2">
+      <div class="row-layout header">
+        <div class="row-layout page-title">
+          <div class="row-layout group_3">
+            <img src="/assets/Accounts Icon - Green.svg" class="image" />
+          </div>
+          <h6 class="h6">
+            Accounts
+          </h6>
+        </div>
+        <div class="row-layout buttons">
+          <button igxButton="flat" igxRipple [igxToggleAction]="newAccountDialog" class="button">
+            <igx-icon>
+              business
+            </igx-icon>
+            <span>New Account</span>
+          </button>
+          <button igxButton="flat" igxRipple class="button">
+            <igx-icon>
+              search
+            </igx-icon>
+            <span>Discover companies</span>
+          </button>
+          <button igxButton="flat" igxRipple class="button">
+            <igx-icon>
+              import_export
+            </igx-icon>
+            <span>Import</span>
+          </button>
+        </div>
+      </div>
+      <div class="row-layout filters-and-sorting">
+        <div class="row-layout group_4">
+          <igx-select type="box" value="2" class="select">
+            <igx-select-item value="1">
+              My Accounts
+            </igx-select-item>
+            <igx-select-item value="2" [selected]="true">
+              All Accounts
+            </igx-select-item>
+          </igx-select>
+          <igx-input-group type="box" class="input">
+            <igx-prefix>
+              <igx-icon class="icon">
+                search
+              </igx-icon>
+            </igx-prefix>
+            <input type="text" placeholder="Search accounts" igxInput />
+          </igx-input-group>
+        </div>
+        <div class="row-layout group_5">
+          <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button_1">
+            <span>Recently Updated</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+          <igx-drop-down #dropdown class="dropdown">
+            <igx-drop-down-item>
+              Name
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Recently Updated
+            </igx-drop-down-item>
+          </igx-drop-down>
+        </div>
+      </div>
+    </div>
+    <igx-grid [data]="northwindCustomers" primaryKey="contactName" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" routerLink="/account-sample" class="grid">
+      <igx-column field="customerID" dataType="string" header="customerID" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="companyName" dataType="string" header="companyName" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="contactName" dataType="string" header="contactName" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="contactTitle" dataType="string" header="contactTitle" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.street" dataType="string" header="street" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.city" dataType="string" header="city" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.region" dataType="string" header="region" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.postalCode" dataType="string" header="postalCode" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.country" dataType="string" header="country" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.phone" dataType="string" header="phone" [sortable]="true" [selectable]="false"></igx-column>
+    </igx-grid>
+  </div>
+</div>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #newAccountDialog>
+  <ng-container>
+    <div class="column-layout group_6">
+      <h6 class="h6_1">
+        New Account
+      </h6>
+      <div class="column-layout group_7">
+        <div class="column-layout group_8">
+          <p class="ig-typography__subtitle-2 text">
+            ACCOUNT INFORMATION
+          </p>
+          <div class="row-layout group_9">
+            <div class="column-layout group_10">
+              <igx-input-group type="box" class="user-input">
+                <igx-suffix>
+                  <igx-icon class="icon">
+                    search
+                  </igx-icon>
+                </igx-suffix>
+                <input type="text" igxInput />
+                <label igxLabel>Account Name</label>
+              </igx-input-group>
+              <igx-select type="box" value="1" class="user-input">
+                <igx-select-item value="1" [selected]="true">
+                  -- None --
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Analyst
+                </igx-select-item>
+                <igx-select-item value="3">
+                  Competitor
+                </igx-select-item>
+                <igx-select-item value="4">
+                  Customer
+                </igx-select-item>
+                <igx-select-item value="5">
+                  Integrator
+                </igx-select-item>
+                <igx-select-item value="6">
+                  Investor
+                </igx-select-item>
+                <igx-select-item value="7">
+                  Partner
+                </igx-select-item>
+                <igx-select-item value="8">
+                  Press
+                </igx-select-item>
+                <igx-select-item value="9">
+                  Prospect
+                </igx-select-item>
+                <igx-select-item value="10">
+                  Reseller
+                </igx-select-item>
+                <igx-select-item value="11">
+                  Other
+                </igx-select-item>
+                <label igxLabel>Type</label>
+              </igx-select>
+              <igx-input-group type="box" class="user-input">
+                <input type="text" igxInput />
+                <label igxLabel>Website</label>
+              </igx-input-group>
+              <igx-input-group type="box" class="ig-typography__body-1 textarea">
+                <label igxLabel>Description</label>
+                <textarea igxInput></textarea>
+              </igx-input-group>
+            </div>
+            <div class="column-layout group_10">
+              <div class="column-layout group_11">
+                <p class="ig-typography__caption text_1">
+                  Account Owner
+                </p>
+                <p class="text_2">
+                  Andrea Silveira
+                </p>
+              </div>
+              <igx-input-group type="box" class="user-input">
+                <igx-suffix>
+                  <igx-icon class="icon">
+                    search
+                  </igx-icon>
+                </igx-suffix>
+                <input type="text" placeholder="Search Accounts..." igxInput />
+                <label igxLabel>Parent Account</label>
+              </igx-input-group>
+              <igx-input-group type="box" class="user-input">
+                <input type="tel" igxInput />
+                <label igxLabel>Phone</label>
+              </igx-input-group>
+              <igx-select type="box" value="1" class="user-input">
+                <igx-select-item value="1" [selected]="true">
+                  -- None --
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Agriculture
+                </igx-select-item>
+                <igx-select-item value="3">
+                  Apparel
+                </igx-select-item>
+                <igx-select-item value="4">
+                  Banking
+                </igx-select-item>
+                <igx-select-item value="5">
+                  Biotechnology
+                </igx-select-item>
+                <igx-select-item value="6">
+                  Chemicals
+                </igx-select-item>
+                <igx-select-item value="7">
+                  Communications
+                </igx-select-item>
+                <igx-select-item value="8">
+                  Construction
+                </igx-select-item>
+                <label igxLabel>Industry</label>
+              </igx-select>
+              <igx-select type="box" class="user-input">
+                <igx-select-item value="1">
+                  Self Employed
+                </igx-select-item>
+                <igx-select-item value="2">
+                  1-10
+                </igx-select-item>
+                <igx-select-item value="3">
+                  11-50
+                </igx-select-item>
+                <igx-select-item value="4">
+                  51-250
+                </igx-select-item>
+                <igx-select-item value="5">
+                  +250
+                </igx-select-item>
+                <label igxLabel>Employees</label>
+              </igx-select>
+            </div>
+          </div>
+        </div>
+        <div class="row-layout group_12">
+          <div class="column-layout group_10">
+            <p class="ig-typography__subtitle-2 text_3">
+              BILLING INFORMATION
+            </p>
+            <igx-input-group type="box" class="user-input">
+              <igx-suffix>
+                <igx-icon class="icon">
+                  search
+                </igx-icon>
+              </igx-suffix>
+              <input type="text" placeholder="Search Address" igxInput />
+              <label igxLabel>Address</label>
+            </igx-input-group>
+            <igx-input-group type="box" class="user-input">
+              <input type="text" igxInput />
+              <label igxLabel>Street</label>
+            </igx-input-group>
+            <div class="row-layout group_13">
+              <igx-input-group type="box" class="user-input_1">
+                <input type="text" igxInput />
+                <label igxLabel>City</label>
+              </igx-input-group>
+              <igx-input-group type="box" class="user-input_1">
+                <input type="text" igxInput />
+                <label igxLabel>State / Province</label>
+              </igx-input-group>
+            </div>
+            <div class="row-layout group_13">
+              <igx-input-group type="box" class="user-input_1">
+                <input type="text" igxInput />
+                <label igxLabel>Zip / Postal Code</label>
+              </igx-input-group>
+              <igx-select type="box" value="1" class="user-input_1">
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <label igxLabel>Country</label>
+              </igx-select>
+            </div>
+          </div>
+          <div class="column-layout group_10">
+            <p class="ig-typography__subtitle-2 text_3">
+              SHIPPING INFORMATION
+            </p>
+            <igx-input-group type="box" class="user-input">
+              <igx-suffix>
+                <igx-icon class="icon">
+                  search
+                </igx-icon>
+              </igx-suffix>
+              <input type="text" placeholder="Search Address" igxInput />
+              <label igxLabel>Address</label>
+            </igx-input-group>
+            <igx-input-group type="box" class="user-input">
+              <input type="text" igxInput />
+              <label igxLabel>Street</label>
+            </igx-input-group>
+            <div class="row-layout group_13">
+              <igx-input-group type="box" class="user-input_1">
+                <input type="text" igxInput />
+                <label igxLabel>City</label>
+              </igx-input-group>
+              <igx-input-group type="box" class="user-input_1">
+                <input type="text" igxInput />
+                <label igxLabel>State / Province</label>
+              </igx-input-group>
+            </div>
+            <div class="row-layout group_13">
+              <igx-input-group type="box" class="user-input_1">
+                <input type="text" igxInput />
+                <label igxLabel>Zip / Postal Code</label>
+              </igx-input-group>
+              <igx-select type="box" value="1" class="user-input_1">
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <igx-select-item value="2">
+                  Country 1
+                </igx-select-item>
+                <label igxLabel>Country</label>
+              </igx-select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" igxRipple [igxToggleAction]="newAccountDialog" class="button_2">
+      Cancel
+    </button>
+    <button igxButton="raised" igxRipple [igxToggleAction]="newAccountDialog" class="button_3">
+      Save
+    </button>
+  </igx-dialog-actions>
+</igx-dialog>
